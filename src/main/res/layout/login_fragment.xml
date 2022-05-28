@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="at.mobappdev.guitarinventory.LoginFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/label_login"
+        android:layout_width="411dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/normal_app_dimension"
+        android:layout_marginTop="@dimen/large_app_dimension"
+        android:layout_marginEnd="@dimen/normal_app_dimension"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:text="@string/string_login"
+        android:textSize="@dimen/xlarge_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutMail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_app_dimension"
+        android:layout_marginBottom="@dimen/large_app_dimension"
+        android:layout_marginStart="@dimen/normal_app_dimension"
+        android:layout_marginEnd="@dimen/normal_app_dimension"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label_login">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextMail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/large_app_dimension"
+            android:layout_marginBottom="@dimen/large_app_dimension"
+            android:hint="@string/string_email"
+            android:inputType="textEmailAddress"
+            app:layout_constraintTop_toBottomOf="@+id/label_login"
+            tools:layout_editor_absoluteX="10dp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_app_dimension"
+        android:layout_marginBottom="@dimen/large_app_dimension"
+        android:layout_marginStart="@dimen/normal_app_dimension"
+        android:layout_marginEnd="@dimen/normal_app_dimension"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayoutMail">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextPwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/large_app_dimension"
+            android:layout_marginBottom="@dimen/large_app_dimension"
+            android:layout_weight="1"
+            android:hint="@string/string_password"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_new_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_app_dimension"
+            android:layout_marginTop="@dimen/large_app_dimension"
+            android:layout_marginEnd="@dimen/normal_app_dimension"
+            android:text="@string/string_new_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPassword" />
+
+        <Button
+            android:id="@+id/btn_existing_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_app_dimension"
+            android:layout_marginTop="@dimen/large_app_dimension"
+            android:layout_marginEnd="@dimen/normal_app_dimension"
+            android:text="@string/string_login_account"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_new_login" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

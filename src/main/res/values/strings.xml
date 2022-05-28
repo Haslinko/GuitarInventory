@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">GuitarInventory</string>
+    <string name="string_email">E-Mail</string>
+    <string name="string_email_error">Please insert your E-Mail</string>
+    <string name="string_password">Password</string>
+    <string name="string_new_login">New Login</string>
+    <string name="string_login_account">Login with Account</string>
+    <string name="string_instructions">Instructions</string>
+    <string name="string_guitar_list">Your list of guitars</string>
+    <string name="string_save">Save</string>
+    <string name="sring_cancel">Cancel</string>
+    <string name="string_login">Login</string>
+    <string name="string_logout">Logout</string>
+    <string name="string_welcome">Welcome %s</string>
+    <string name="string_add_new_guitar">Add new guitar</string>
+    <string name="string_product">Product</string>
+    <string name="string_stringamount">Strings</string>
+    <string name="string_guitar_description">Description</string>
+    <string name="string_guitar_style">Guitar Style</string>
+    <string name="string_welcome_text">Welcome to your guitar inventory!\n\nThis app will help you to always have an overview of your loved guitars!
+    </string>
+    <string name="string_welcome_add">Click the instructions button to go to the instructions screen.</string>
+    <string name="string_instructions_text">Welcome to your guitar inventory instructions!\n\nThis instructions will shortly explain how to use your guitar inventory app!
+    </string>
+    <string name="string_instructions_add">Once you are signed in - either with existing or a new account \n- you will be presented to a short welcome and instructions screen. \n
+    From the instructions you can go to your guitar list screen. \n\nClick the plus button to create a new item in your list on the guitar detail screen \n\nType in some basic information about your loved guitar and click save \n\nBack in the guitar list you will see your new added guitar \n\n
+    And now go and save your first guitar!
+    </string>
+    <string-array name="product_array">
+        <item>Amistar</item>
+        <item>Fender</item>
+        <item>Gibson</item>
+        <item>Martin</item>
+        <item>National</item>
+        <item>Takamine</item>
+        <item>Taylor</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="string_array">
+        <item>6</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="style_array">
+        <item>Classic</item>
+        <item>Country and Western</item>
+        <item>E-Guitar</item>
+        <item>Hollobody</item>
+        <item>Resonator</item>
+        <item>Jazz</item>
+        <item>Other</item>
+    </string-array>
+
+
+</resources>

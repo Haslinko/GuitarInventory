@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="small_app_dimension">2dp</dimen>
+    <dimen name="normal_app_dimension">4dp</dimen>
+    <dimen name="large_app_dimension">8dp</dimen>
+
+    <dimen name="large_text_size">16sp</dimen>
+    <dimen name="xlarge_text_size">32sp</dimen>
+
+
+</resources>

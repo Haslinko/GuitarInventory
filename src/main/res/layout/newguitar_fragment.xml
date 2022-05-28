@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="guitarinventoryviewmodel"
+            type="at.mobappdev.guitarinventory.GuitarinventoryViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/lbl_header_guitar_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/string_add_new_guitar"
+            android:textSize="@dimen/xlarge_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/layout_guitar_product"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_app_dimension"
+            android:layout_marginTop="@dimen/large_app_dimension"
+            android:layout_marginEnd="@dimen/normal_app_dimension"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/lbl_header_guitar_detail"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_header_guitar_detail">
+
+            <TextView
+                android:id="@+id/textViewProduct"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/string_product" />
+
+            <EditText
+                android:id="@+id/spinner_product"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="@{guitarinventoryviewmodel.product}"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_guitar_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/large_app_dimension"
+            android:layout_marginStart="@dimen/normal_app_dimension"
+            android:layout_marginEnd="@dimen/normal_app_dimension"
+            app:layout_constraintStart_toStartOf="@+id/layout_guitar_product"
+            app:layout_constraintTop_toBottomOf="@+id/layout_guitar_product">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/string_guitar_style" />
+
+            <EditText
+                android:id="@+id/spinner_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="@{guitarinventoryviewmodel.style}"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_guitar_strings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_app_dimension"
+            android:layout_marginTop="@dimen/large_app_dimension"
+            android:layout_marginEnd="@dimen/normal_app_dimension"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/layout_guitar_style"
+            app:layout_constraintTop_toBottomOf="@+id/layout_guitar_style">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/string_stringamount" />
+
+            <EditText
+                android:id="@+id/spinner_strings"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="@{guitarinventoryviewmodel.strings}"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_guitar_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_app_dimension"
+            android:layout_marginTop="@dimen/large_app_dimension"
+            android:layout_marginEnd="@dimen/normal_app_dimension"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/layout_guitar_strings"
+            app:layout_constraintTop_toBottomOf="@+id/layout_guitar_strings">
+
+            <TextView
+                android:id="@+id/textviewdescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/string_guitar_description" />
+
+            <EditText
+                android:id="@+id/edittextdescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:text="@{guitarinventoryviewmodel.description}"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_app_dimension"
+            android:layout_marginEnd="@dimen/normal_app_dimension"
+            android:text="@string/string_save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_guitar_desc" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_app_dimension"
+            android:layout_marginEnd="@dimen/normal_app_dimension"
+            android:text="@string/sring_cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_save" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

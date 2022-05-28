@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="at.mobappdev.guitarinventory.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/login_fragment">
+        <action
+            android:id="@+id/action_loginFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="at.mobappdev.guitarinventory.WelcomeFragment"
+        android:label="WelcomeFragment"
+        tools:layout="@layout/welcome_fragment">
+        <argument
+            android:name="loginName"
+            app:argType="string"
+            android:defaultValue="New Login" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_instructionsFragment"
+            app:destination="@id/instructionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/instructionsFragment"
+        android:name="at.mobappdev.guitarinventory.InstructionsFragment"
+        android:label="InstructionsFragment"
+        tools:layout="@layout/instructions_fragment">
+        <action
+            android:id="@+id/action_instructionsFragment_to_guitarinventoryFragment"
+            app:destination="@id/guitarinventoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/guitarinventoryFragment"
+        android:name="at.mobappdev.guitarinventory.GuitarinventoryFragment"
+        android:label="GuitarinventoryFragment"
+        tools:layout="@layout/guitarinventory_fragment">
+        <action
+            android:id="@+id/action_guitarinventoryFragment_to_newguitarFragment"
+            app:destination="@id/newguitarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newguitarFragment"
+        android:name="at.mobappdev.guitarinventory.NewguitarFragment"
+        android:label="NewguitarFragment"
+        tools:layout="@layout/newguitar_fragment">
+        <action
+            android:id="@+id/action_newguitarFragment_to_guitarinventoryFragment"
+            app:destination="@id/guitarinventoryFragment"
+            app:popUpTo="@id/guitarinventoryFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
